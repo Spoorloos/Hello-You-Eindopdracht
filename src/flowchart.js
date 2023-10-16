@@ -1,4 +1,4 @@
-const flowChart = [
+export const flowChart = [
     {
         decision: "Decision 1",
         options: [
@@ -24,5 +24,3 @@ const flowChart = [
         decision: "Gefeliciteerd, je bent bij het goede einde terecht gekomen."
     }
 ];
-
-module.exports = { flowChart };

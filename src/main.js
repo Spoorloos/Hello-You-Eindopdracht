@@ -1,6 +1,6 @@
-// Packages
-const readline = require("readline-sync");
-const { flowChart } = require("./flowchart");
+// Imports
+import readline from "readline-sync";
+import { flowChart } from "./flowchart.js";
 
 // Navigate flowchart
 let index = 0;
