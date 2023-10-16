@@ -1,33 +1,6 @@
 // Packages
 const readline = require("readline-sync");
-
-// Flowchart
-const flowChart = [
-    {
-        decision: "Decision 1",
-        options: [
-            { option: "Option 1", pointsTo: 2 },
-            { option: "Option 2", pointsTo: 1 }
-        ]
-    },
-    {
-        decision: "Decision 2",
-        options: [
-            { option: "Option 1", pointsTo: 0 },
-            { option: "Option 2", pointsTo: 2 }
-        ]
-    },
-    {
-        decision: "Decision 3",
-        options: [
-            { option: "Option 1", pointsTo: 0 },
-            { option: "Option 2", pointsTo: -1 }
-        ]
-    },
-    {
-        decision: "Gefeliciteerd, je bent bij het goede einde terecht gekomen."
-    }
-];
+const { flowChart } = require("./flowchart");
 
 // Navigate flowchart
 let index = 0;
@@ -35,7 +8,7 @@ let index = 0;
 while (true) {
     const { decision, options } = flowChart.at(index);
 
-    if (!options) {
+    if (!options || options.length === 0) {
         console.log('\n' + decision);
         break;
     }
