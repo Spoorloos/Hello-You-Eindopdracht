@@ -6,22 +6,22 @@ const flowChart = [
     {
         decision: "Decision 1",
         options: [
-            { option: "Option 1", points_to: 2 },
-            { option: "Option 2", points_to: 1 }
+            { option: "Option 1", pointsTo: 2 },
+            { option: "Option 2", pointsTo: 1 }
         ]
     },
     {
         decision: "Decision 2",
         options: [
-            { option: "Option 1", points_to: 0 },
-            { option: "Option 2", points_to: 2 }
+            { option: "Option 1", pointsTo: 0 },
+            { option: "Option 2", pointsTo: 2 }
         ]
     },
     {
         decision: "Decision 3",
         options: [
-            { option: "Option 1", points_to: 0 },
-            { option: "Option 2", points_to: -1 }
+            { option: "Option 1", pointsTo: 0 },
+            { option: "Option 2", pointsTo: -1 }
         ]
     }
 ];
@@ -39,7 +39,7 @@ do {
     const { decision, options } = flowChart[index];
     const option = readline.keyInSelect(options.map(v => v.option), decision, { cancel: false });
 
-    index = options[option].points_to;
+    index = options[option].pointsTo;
 
     console.log('\n' + '='.repeat(25));
 } while (index >= 0)
