@@ -23,25 +23,29 @@ const flowChart = [
             { option: "Option 1", pointsTo: 0 },
             { option: "Option 2", pointsTo: -1 }
         ]
+    },
+    {
+        decision: "Gefeliciteerd, je bent bij het goede einde terecht gekomen."
     }
 ];
 
-const endings = [
-    "Gefeliciteerd, je bent bij het goede einde terecht gekomen",
-    "Helaas, je bent bij het slechte einde terecht gekomen",
-    "Je bent bij het normale einde terecht gekomen"
-];
-
-// Main
+// Navigate flowchart
 let index = 0;
 
-do {
-    const { decision, options } = flowChart[index];
-    const option = readline.keyInSelect(options.map(v => v.option), decision, { cancel: false });
+while (true) {
+    const { decision, options } = flowChart.at(index);
 
-    index = options[option].pointsTo;
+    if (!options) {
+        console.log('\n' + decision);
+        break;
+    }
 
+    const optionIndex = readline.keyInSelect(
+        options.map(v => v.option),
+        decision,
+        { cancel: false }
+    );
+
+    index = options[optionIndex].pointsTo;
     console.log('\n' + '='.repeat(25));
-} while (index >= 0)
-
-console.log('\n' + endings[Math.abs(index) - 1]);
+}
