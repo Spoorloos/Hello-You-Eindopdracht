@@ -1,4 +1,3 @@
-// Imports
 import readline from "readline-sync";
 import { flowChart } from "./flowchart.js";
 
@@ -6,12 +5,17 @@ import { flowChart } from "./flowchart.js";
 let index = 0;
 
 while (true) {
-    const { decision, options } = flowChart.at(index);
+    const { decision, art, options } = flowChart.at(index);
 
     // Check if you've reached an end of the flowchart
     if (!options || options.length === 0) {
         console.log('\n' + decision);
         break;
+    }
+
+    // If there's ascii art, print it
+    if (art) {
+        console.log('\n' + art);
     }
 
     // Get the options and prompt them
