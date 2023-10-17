@@ -3,9 +3,7 @@ import { flowChart } from "./flowchart.js";
 
 do {
     // Navigate flowchart
-    let index = 0;
-
-    while (true) {
+    for (let index = 0;;) {
         const { decision, art, options } = flowChart.at(index);
 
         // Clear the console and print the art and decision
