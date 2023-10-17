@@ -8,6 +8,9 @@ do {
     while (true) {
         const { decision, art, options } = flowChart.at(index);
 
+        // Print a seperator
+        console.log('\n' + '='.repeat(50));
+
         // Check if you've reached an end of the flowchart
         if (!options || options.length === 0) {
             console.log('\n' + decision);
@@ -19,15 +22,13 @@ do {
             console.log('\n' + art);
         }
 
-        // Get the options and prompt them
+        // Get the options, prompt them and set the next index
         const optionIndex = readline.keyInSelect(
             options.map(v => v.option),
             decision,
             { cancel: false }
         );
 
-        // Set the index to the one the option points to and print a separator
         index = options[optionIndex].pointsTo;
-        console.log('\n' + '='.repeat(25));
     }
-} while (readline.keyInYN("Wil je het spel herstarten?"))
+} while (readline.keyInYNStrict("Wil je het spel herstarten?"))
