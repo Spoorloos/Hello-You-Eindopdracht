@@ -1,9 +1,9 @@
-import * as asciiArt from "./ascii_art.js";
+//import * as asciiArt from "./ascii_art.js";
 
 export const flowChart = [
     {
         decision: "Decision 1",
-        art: asciiArt.exampleArt,
+        //art: asciiArt.exampleArt,
         options: [
             { option: "Option 1", pointsTo: 2 },
             { option: "Option 2", pointsTo: 1 }

@@ -6,26 +6,25 @@ do {
     let index = 0;
 
     while (true) {
+        console.clear();
+ 
+        // Check if you've reached an end of the flowchart
         const { decision, art, options } = flowChart.at(index);
 
-        // Print a seperator
-        console.log('\n' + '='.repeat(50));
-
-        // Check if you've reached an end of the flowchart
         if (!options || options.length === 0) {
-            console.log('\n' + decision);
+            console.log(decision);
             break;
         }
 
         // If there's ascii art, print it
-        if (art) {
-            console.log('\n' + art);
-        }
+        if (art) console.log(art + '\n');
 
-        // Get the options, prompt them and set the next index
+        // Print the decision, prompt the options and set the next index
+        console.log(decision);
+        
         const optionIndex = readline.keyInSelect(
             options.map(v => v.option),
-            decision,
+            null,
             { cancel: false }
         );
 
