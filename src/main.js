@@ -6,18 +6,21 @@ do {
     let index = 0;
 
     while (true) {
+        const { decision, art, options } = flowChart.at(index);
+
+        // Clear the console
         console.clear();
  
         // Check if you've reached an end of the flowchart
-        const { decision, art, options } = flowChart.at(index);
-
-        if (!options || options.length === 0) {
+        if (!options || options.length < 1) {
             console.log(decision);
             break;
         }
 
-        // If there's ascii art, print it
-        if (art) console.log(art + '\n');
+        // Check if the decision has ascii art and print it
+        if (art) {
+            console.log(art + '\n');
+        }
 
         // Print the decision, prompt the options and set the next index
         console.log(decision);
