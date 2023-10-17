@@ -8,29 +8,21 @@ do {
     while (true) {
         const { decision, art, options } = flowChart.at(index);
 
-        // Clear the console
+        // Clear the console and print the art and decision
         console.clear();
- 
-        // Check if you've reached an end of the flowchart
-        if (!options || options.length < 1) {
-            console.log(decision);
-            break;
+        console.log((art ? art + "\n\n" : '') + decision);
+
+        // If there's any options, prompt them and set the next index
+        if (options?.length > 0) {
+            const optionIndex = readline.keyInSelect(
+                options.map(v => v.option),
+                "Vul je antwoord in",
+                { cancel: false }
+            );
+    
+            index = options[optionIndex].pointsTo;
+        } else {
+            break; // Reached an end, break the loop
         }
-
-        // Check if the decision has ascii art and print it
-        if (art) {
-            console.log(art + '\n');
-        }
-
-        // Print the decision, prompt the options and set the next index
-        console.log(decision);
-        
-        const optionIndex = readline.keyInSelect(
-            options.map(v => v.option),
-            null,
-            { cancel: false }
-        );
-
-        index = options[optionIndex].pointsTo;
     }
 } while (readline.keyInYNStrict("Wil je het spel herstarten?"))
