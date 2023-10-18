@@ -1,10 +1,10 @@
-import readline from "readline-sync";
-import flowChart from "./flowchart.js";
+import { keyInSelect, keyInYN } from "readline-sync";
+import flowchart from "./flowchart.js";
 
 do {
     // Navigate flowchart
     for (let index = 0;;) {
-        const { decision, art, options } = flowChart.at(index);
+        const { decision, art, options } = flowchart.at(index);
 
         // Clear the console and print the art and decision
         console.clear();
@@ -12,7 +12,7 @@ do {
 
         // If there's any options, prompt them and set the next index
         if (options?.length > 0) {
-            const optionIndex = readline.keyInSelect(
+            const optionIndex = keyInSelect(
                 options.map(v => v.option),
                 "Vul je antwoord in",
                 { cancel: false }
@@ -23,4 +23,4 @@ do {
             break; // Reached an end, break the loop
         }
     }
-} while (readline.keyInYNStrict("Wil je het spel herstarten?"))
+} while (keyInYN("Wil je het spel herstarten?"))
