@@ -1,5 +1,5 @@
 import readline from "readline-sync";
-import { flowChart } from "./flowchart.js";
+import flowChart from "./flowchart.js";
 
 do {
     // Navigate flowchart

@@ -1,4 +1,4 @@
-export const flowChart = [
+export default [
     {
         decision: "Decision 1",
         art: "Example Art",
