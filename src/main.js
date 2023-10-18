@@ -8,7 +8,7 @@ do {
 
         // Clear the console and print the art and decision
         console.clear();
-        console.log((art ? art + "\n\n" : '') + decision);
+        console.log((art ? art + "\n\n" : "") + decision);
 
         // If there's any options, prompt them and set the next index
         if (options?.length > 0) {
