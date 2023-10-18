@@ -1,7 +1,17 @@
 import { keyInSelect, keyInYN } from "readline-sync";
 import flowchart from "./flowchart.js";
 
-do {
+console.log(`Welkom bij...
+ __  ____     __           _______      ________ _   _ _______ _    _ _____  ______ 
+|  \\/  \\ \\   / /     /\\   |  __ \\ \\    / /  ____| \\ | |__   __| |  | |  __ \\|  ____|
+| \\  / |\\ \\_/ /     /  \\  | |  | \\ \\  / /| |__  |  \\| |  | |  | |  | | |__) | |__   
+| |\\/| | \\   /     / /\\ \\ | |  | |\\ \\/ / |  __| | . ' |  | |  | |  | |  _  /|  __|  
+| |  | |  | |     / ____ \\| |__| | \\  /  | |____| |\\  |  | |  | |__| | | \\ \\| |____ 
+|_|  |_|  |_|    /_/    \\_\\_____/   \\/   |______|_| \\_|  |_|   \\____/|_|  \\_\\______|
+`);
+
+
+while (keyInYN("Wil je het spel (her)starten?")) {
     // Navigate flowchart
     for (let index = 0;;) {
         const { decision, art, options } = flowchart.at(index);
@@ -23,4 +33,4 @@ do {
             break; // Reached an end, break the loop
         }
     }
-} while (keyInYN("Wil je het spel herstarten?"))
+}
