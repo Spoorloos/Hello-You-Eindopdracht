@@ -1,12 +1,12 @@
 import { title, flowchart } from "./flowchart.js";
-import { keyInSelect, keyInYN } from "readline-sync";
+import { keyInSelect, keyInYNStrict } from "readline-sync";
 
 // Print welcome message and title
 console.clear();
 console.log(`Welkom bij...\n${title}\n`);
 
 // Game loop
-while (keyInYN("Wil je het spel (her)starten?")) {
+while (keyInYNStrict("Wil je het spel (her)starten?")) {
     // Navigate flowchart
     for (let index = 0;;) {
         const { decision, art, options } = flowchart.at(index);
