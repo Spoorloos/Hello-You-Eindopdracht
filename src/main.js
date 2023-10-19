@@ -1,16 +1,9 @@
-import flowchart from "./flowchart.js";
+import { titel, flowchart } from "./flowchart.js";
 import { keyInSelect, keyInYN } from "readline-sync";
 
 // Print welcome message and title
 console.clear();
-console.log(`Welkom bij...
- __  ____     __           _______      ________ _   _ _______ _    _ _____  ______ 
-|  \\/  \\ \\   / /     /\\   |  __ \\ \\    / /  ____| \\ | |__   __| |  | |  __ \\|  ____|
-| \\  / |\\ \\_/ /     /  \\  | |  | \\ \\  / /| |__  |  \\| |  | |  | |  | | |__) | |__   
-| |\\/| | \\   /     / /\\ \\ | |  | |\\ \\/ / |  __| |     |  | |  | |  | |  _  /|  __|  
-| |  | |  | |     / ____ \\| |__| | \\  /  | |____| |\\  |  | |  | |__| | | \\ \\| |____ 
-|_|  |_|  |_|    /_/    \\_\\_____/   \\/   |______|_| \\_|  |_|   \\____/|_|  \\_\\______|
-`);
+console.log(`Welkom bij...\n${titel}\n`);
 
 // Game loop
 while (keyInYN("Wil je het spel (her)starten?")) {
