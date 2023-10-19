@@ -1,9 +1,9 @@
-import { titel, flowchart } from "./flowchart.js";
+import { title, flowchart } from "./flowchart.js";
 import { keyInSelect, keyInYN } from "readline-sync";
 
 // Print welcome message and title
 console.clear();
-console.log(`Welkom bij...\n${titel}\n`);
+console.log(`Welkom bij...\n${title}\n`);
 
 // Game loop
 while (keyInYN("Wil je het spel (her)starten?")) {
