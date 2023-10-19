@@ -1,7 +1,8 @@
-import { keyInSelect, keyInYN } from "readline-sync";
 import flowchart from "./flowchart.js";
+import { keyInSelect, keyInYN } from "readline-sync";
 
 // Print welcome message and title
+console.clear();
 console.log(`Welkom bij...
  __  ____     __           _______      ________ _   _ _______ _    _ _____  ______ 
 |  \\/  \\ \\   / /     /\\   |  __ \\ \\    / /  ____| \\ | |__   __| |  | |  __ \\|  ____|
