@@ -6,7 +6,7 @@ console.clear();
 console.log(`Welkom bij...\n${title}\n`);
 
 // Game loop
-while (keyInYNStrict("Wil je het spel (her)starten?")) {
+while (keyInYNStrict('Wil je het spel (her)starten?')) {
     // Navigate flowchart
     for (let index = 0;;) {
         const { decision, art, options } = flowchart.at(index);
@@ -19,11 +19,11 @@ while (keyInYNStrict("Wil je het spel (her)starten?")) {
         if (options?.length > 0) {
             const optionIndex = keyInSelect(
                 options.map(v => v.option),
-                "Vul je antwoord in",
+                'Vul je antwoord in',
                 { cancel: false }
             );
     
-            index = options[optionIndex].pointsTo;
+            index = options[optionIndex].pointsTo ?? 0;
         } else {
             break; // Reached an end, break the loop
         }
