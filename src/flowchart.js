@@ -8,6 +8,21 @@ export const flowchart = [
     // Root 1
     { // 0
         decision: 'You find yourself alone in a spooky forest on halloween night. Which path do you take?',
+        art:`⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⢀⣼⣦⠀⠀⣠⣿⣿⣦⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣼⣆⠀⠀⠀⠀⠀
+⠀⠀⠒⣿⣿⣿⠓⠀⠀⠻⣿⣿⠀⢀⣴⣿⣦⡀⠀⢀⣾⣦⠘⢿⣿⣧⡀⠀⠀⠀
+⠀⢀⣴⣿⡿⠃⡄⠈⠻⣿⣟⣉⣀⠉⣽⡿⠋⠡⠴⣿⣿⣿⠓⠀⠙⢇⠀⠀⠀⠀
+⠀⠿⣿⠟⢁⣾⣿⣦⣀⠘⠿⠟⢁⣼⣿⣿⣷⠂⣴⣿⣿⣿⣆⠘⢶⣶⣿⠶⠤⠀
+⠀⣀⣀⡀⢉⣿⣿⣿⡍⠀⢀⣀⠙⢻⠿⢋⣤⣾⣿⣿⣿⣿⣿⣷⣄⠙⢿⣦⡀⠀
+⠀⠟⠋⣠⣾⣿⣿⣿⣿⣦⣌⠉⠠⣤⣤⣤⡌⢙⣿⣿⣿⣿⣿⣿⠛⠛⠂⢈⣙⠀
+⠀⠀⣉⡉⣹⣿⣿⣿⣿⣏⠉⣉⣀⣈⠙⠋⣠⣿⣿⣿⣿⣿⣿⣿⣆⠙⠛⠛⠛⠀
+⠀⠀⠋⣴⣿⣿⣿⣿⣿⣿⣷⣌⠉⢁⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣄⠀⠀⠀
+⠀⠴⢾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠦⠈⣙⠛⠛⠛⠛⠛⠛⠛⠛⣉⣉⠁⠀⠀⠀
+⠀⠀⣦⣤⡄⢉⣉⣉⣉⠉⣡⣤⠀⠀⠀⣿⣿⣷⠀⢰⣿⣿⡇⢸⣿⣿⠀⠀⠀⠀
+⠀⠀⣿⣿⡇⣸⣿⣿⣿⡄⢻⣿⠀⠀⠀⣿⣿⣿⠀⢸⣿⣿⡇⢸⣿⣿⠀⠀⠀⠀
+⠀⠀⣿⣿⠁⣿⣿⣿⣿⡇⠸⠿⠀⠀⠀⣿⣿⣿⠀⢸⣿⣿⣇⠸⣿⣿⠀⠀⠀⠀
+⠀⠀⠛⠛⠀⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠉⠉⠉⠀⢸⣿⣿⣿⠀⠿⠿⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠛⠛⠛⠛⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠉`,
         options: [
             { option: 'Take a dark and winding path', pointsTo: 1 },
             { option: 'Follow a faint, eerie light', pointsTo: 4 }
@@ -15,6 +30,14 @@ export const flowchart = [
     },
     { // 1
         decision: 'You chose the dark and winding path. A ghostly figure appears! What do you do?',
+        art: `       .-.
+      ( " )
+   /\\_.' '._/\\
+   |         |
+    \\       /
+     \\    /\`
+   (__)  /
+   \`.__.'`,
         options: [
             { option: 'Approach cautiously', pointsTo: 2 },
             { option: 'Scream and run', pointsTo: -1 }
@@ -38,13 +61,43 @@ export const flowchart = [
     // Root 2
     { // 4
         decision: 'You followed the faint, eerie light, leading to a haunted house. Do you enter?',
+        art: `                                              ,           ^'^  _
+                                              )               (_) ^'^
+         _/\\_                    .---------. ((        ^'^
+         (('>                    )\`'\`'\`'\`'\`( ||                 ^'^
+    _    /^|                    /\`'\`'\`'\`'\`'\`\\||           ^'^
+    =>--/__|m---               /\`'\`'\`'\`'\`'\`'\`\\|
+         ^^           ,,,,,,, /\`'\`'\`'\`'\`'\`'\`'\`\\      ,
+                     .-------.\`|\`\`\`\`\`\`\`\`\`\`\`\`\`|\`  .   )
+                    / .^. .^. \\|  ,^^, ,^^,  |  / \\ ((
+                   /  |_| |_|  \\  |__| |__|  | /,-,\\||
+        _         /_____________\\ |")| |  |  |/ |_| \\|
+       (")         |  __   __  |  '==' '=='  /_______\\     _
+      (' ')        | /  \ /  \ |   _______   |,^, ,^,|    (")
+       \\  \\        | |--| |--| |  ((--.--))  ||_| |_||   (' ')
+     _  ^^^ _      | |__| |("| |  ||  |  ||  |,-, ,-,|   /  /
+   ,' ',  ,' ',    |           |  ||  |  ||  ||_| |_||   ^^^
+.,,|RIP|,.|RIP|,.,,'==========='==''=='==''=='======='`,
         options: [
             { option: 'Yes, I\'m feeling brave', pointsTo: 5 },
-            { option: 'No, I\'ts too scary', pointsTo: -2 }
+            { option: 'No, It\'s too scary', pointsTo: -2 }
         ]
     },
     { // 5
         decision: 'You enter the haunted house and meet a witch. She offers a magical potion. Will you drink it?',
+        art: `      _____
+     \`.___,'
+      (___)
+      <   >
+       ) (
+      /\`-.\\
+     /     \\
+    / _    _\\
+   :,' \`-.' \`:
+   |         |
+   :         ;
+    \\       /
+     \`.___.'`,
         options: [
             { option: 'Drink the potion', pointsTo: 6 },
             { option: 'Politely decline', pointsTo: -4 }
@@ -68,6 +121,20 @@ export const flowchart = [
     // Root 3
     { // 8
         decision: 'While continuing your journey, you come across a creepy graveyard. What will you do?',
+        art: `⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⣠⣔⡿⠛⠒⠒⡕⢄⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⣀⣴⣳⠃⠀⠀⠀⠀⠘⢎⡦⣄⠀⠀⠀⠀
+⠀⠀⠀⣜⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠈⠢⣳⠀⠀⠀
+⠀⠀⢸⣸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⡆⠀⠀
+⠀⠀⠘⡏⢀⢴⠶⣤⢄⢲⣲⠦⣦⣤⡤⡀⡇⠇⠀⠀
+⠀⠀⠀⣧⠀⣾⢀⣸⡸⠘⢸⠀⣿⠀⣸⡏⣧⠀⠀⠀
+⠀⠀⠀⢹⠀⣿⠿⡯⡀⢀⣼⢀⣿⠛⠉⠀⢻⠀⠀⠀
+⠀⠀⠀⣿⠐⠛⠂⠘⠛⠒⠛⠊⠛⠂⠀⢸⢸⠀⠀⠀
+⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡼⠀⠀⠀
+⠀⠀⠀⢻⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡆⠀⠀⠀
+⠀⠀⢀⢾⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡷⡀⠀⠀
+⠀⣠⠃⠘⠊⠉⠛⠛⠋⠩⠩⠭⠍⠛⠛⠛⠃⠐⡄⠀
+⠀⣯⡉⠉⢉⡉⠉⠉⠉⠉⠉⠉⣉⣉⣉⣉⣉⣉⣹`,
         options: [
             { option: 'Explore the graveyard', pointsTo: 9 },
             { option: 'Avoid it and keep going', pointsTo: 12 }
@@ -82,6 +149,14 @@ export const flowchart = [
     },
     { // 10
         decision: 'You investigate further and discover a hidden treasure beneath the tombstone!',
+        art: `         __________
+        /\\____;;___\\
+       | /         /
+       \`. ())oo() .
+        |\\(%()*^^()^\\
+       %| |-%-------|
+      % \\ | %  ))   |
+      %  \\|%________|`,
         options: [
             { option: 'Take the treasure', pointsTo: 11 },
             { option: 'Leave it and move on', pointsTo: 13 }
@@ -105,8 +180,19 @@ export const flowchart = [
     // Root 4
     { // 13
         decision: 'While continuing, you stumble upon a witch\'s cauldron. She offers you a brew. Will you drink it?',
+        art: `              (
+               )  )
+           ______(____
+          (___________)
+           /         \\
+          /           \\
+         |             |
+     ____\\             /____
+    ()____'.__     __.'____()
+    jgs  .'\` .'\`\`\`'. \`-.
+        ().'\`       \`'.()`,
         options: [
-            { option: 'Take a sip', pointsTo: -6 },
+            { option: 'Take a sip', pointsTo: -7 },
             { option: 'Decline politely and move on', pointsTo: -6 }
         ]
     },
