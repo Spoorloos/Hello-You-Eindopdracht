@@ -3,12 +3,14 @@ import { keyInSelect, keyInYNStrict } from "readline-sync";
 
 // Print welcome message and title
 console.clear();
-console.log(`Welkom bij...\n${title}\n`);
+console.log(`Welcome to...\n${title}\n`);
 
 // Game loop
-while (keyInYNStrict('Wil je het spel (her)starten?')) {
+while (keyInYNStrict('Do you want to (re)start the game?')) {
     // Navigate flowchart
-    for (let index = 0;;) {
+    let index = 0;
+
+    while (true) {
         const { decision, art, options } = flowchart.at(index);
 
         // Clear the console and print the art and decision
@@ -19,7 +21,7 @@ while (keyInYNStrict('Wil je het spel (her)starten?')) {
         if (options?.length > 0) {
             const optionIndex = keyInSelect(
                 options.map(v => v.option),
-                'Vul je antwoord in',
+                'Enter your choice',
                 { cancel: false }
             );
     
