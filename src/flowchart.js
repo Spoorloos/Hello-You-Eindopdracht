@@ -192,18 +192,82 @@ export const flowchart = [
     jgs  .'\` .'\`\`\`'. \`-.
         ().'\`       \`'.()`,
         options: [
-            { option: 'Take a sip', pointsTo: -7 },
-            { option: 'Decline politely and move on', pointsTo: -6 }
+            { option: 'Take a sip', pointsTo: 14 },
+            { option: 'Politely decline and move on', pointsTo: -6 }
+        ]
+    },
+    { // 14
+        decision: 'You took a sip, and the witch\'s brew transformed you into a black cat. However - not all hope is lost. You continue your adventure as a cat! What will you do next?',
+        options: [
+            { option: 'Panic and run off', pointsTo: 15 }
+        ]
+    },
+    { // 15
+        decision: 'You ran off and found a spooky mansion hidden in the woods, what will you do?',
+        options: [
+            { option: 'Investigate', pointsTo: 16 },
+            { option: 'No, it\'s too spooky', pointsTo: -8 }
+        ]
+    },
+    { // 16
+        decision: 'You enter the mansion and find a yourself in a haunted ballroom. Since you\'re a cat the dancing ghosts don\'t notice you. What will you do?',
+        options: [
+            { option: 'Try to attract the attention of the ghosts', pointsTo: 17 },
+            { option: 'Leave', pointsTo: -7 }
+        ]
+    },
+    { //17
+        decision: 'You decided to attract the attention of the ghosts. One of them looks at you and somehow notices you\'re not a real cat. You\'re in luck because it happens to be a friendly ghost! He transforms you back into a human and shows you a hidden exit.',
+        options: [
+            { option: 'Leave the mansion', pointsTo: -9 },
+            { option: 'Investigate the mansion further', pointsTo: 21 }
+        ]
+    },
+    { // 18
+        decision: 'On the second floor of the mansion you find a strange room and you decide to enter. In the room you find a small box with a strange aura coming off of it. What are you gonna do?',
+        options: [
+            { option: 'Open the box', pointsTo: 19 },
+            { option: 'Investigate the room further' } //////////////////////////////
+        ]
+    },
+    { // 19
+        decision: 'You find a letter inside the box, the letter says there\'s a treasure hidden in the mansion somewhere in the basement. What will you do?',
+        options: [
+            { option: 'Try finding the treasure', pointsTo: 20 },
+            { option: 'Leave the mansion', pointsTo: -9 }
+        ]
+    },
+    { // 20
+        decision: 'You went down to the basement and after looking around for a while you found a vault behind a painting. The vault is already unlocked and the treasure is gone already!',
+        options: [
+            { option: 'Leave the mansion', pointsTo: -9 }
+        ]
+    },
+    { // 21
+        decision: 'You find a bunch of jewelry hidden under the bed! Will you take it or are you afraid it might be cursed?',
+        options: [
+            { option: 'Take the jewelry', pointsTo: 22 },
+            { option: 'Leave it and leave the mansion', pointsTo: -9 }
+        ]
+    },
+    { // 22
+        decision: 'You took the jewelry and you notice nothing strange about it so far. What are you gonna do?',
+        options: [
+            { option: 'Put the jewelry back and leave the mansion', pointsTo: -9 },
+            { option: 'Leave the mansion with the jewelry', pointsTo: -9 }
         ]
     },
 
+
     // Endings
-    { decision: 'You take a sip, and the witch\'s brew transforms you into a black cat. Game over!' },
-    { decision: 'You found your way out of the forest and got back home!' },
-    { decision: 'The ghouls turned out not to be friendly, and they killed you. Game over!' },
-    { decision: 'The evil witch insisted you take it, and after continuously declining she kills you. Game over!' },
-    { decision: 'You decided to freak out, and the witch killed you. Game over!' },
-    { decision: 'You turned back and ran home. The night ends peacefully.' },
-    { decision: 'You screamed and ran away from the ghost. Unfortunately, you tripped and fell. Game over!' }
+    { decision: 'Outside the mansion you find a path leading out the forest and you found your way back home!' }, // -9
+    { decision: 'Outside the mansion you find a path leading out the forest and you found your way back home. But.. you\'re still a cat!' }, // -8
+    { decision: 'Unfortunately, the door you entered the mansion with has disappeared, and you\'re now stuck for eternity. Game over!' }, // -7
+    { decision: 'You found your way out of the forest and got back home!' }, // -6
+    { decision: 'The ghouls turned out not to be friendly, and they killed you. Game over!' }, // -5
+    { decision: 'The evil witch insisted you take it, and after continuously declining she kills you. Game over!' }, // -4
+    { decision: 'You decided to freak out, and the witch killed you. Game over!' }, // -3
+    { decision: 'You turned back and ran home. The night ends peacefully.' }, // -2
+    { decision: 'You screamed and ran away from the ghost. Unfortunately, you tripped and fell. Game over!' } // -1
 ];
   
