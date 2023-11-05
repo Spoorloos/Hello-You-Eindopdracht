@@ -227,7 +227,7 @@ export const flowchart = [
         decision: 'On the second floor of the mansion you find a strange room and you decide to enter. In the room you find a small box with a strange aura coming off of it. What are you gonna do?',
         options: [
             { option: 'Open the box', pointsTo: 19 },
-            { option: 'Investigate the room further' } //////////////////////////////
+            { option: 'Investigate the room further', pointsTo: 21 }
         ]
     },
     { // 19
