@@ -220,7 +220,7 @@ export const flowchart = [
         decision: 'You decided to attract the attention of the ghosts. One of them looks at you and somehow notices you\'re not a real cat. You\'re in luck because it happens to be a friendly ghost! He transforms you back into a human and shows you a hidden exit.',
         options: [
             { option: 'Leave the mansion', pointsTo: -9 },
-            { option: 'Investigate the mansion further', pointsTo: 21 }
+            { option: 'Investigate the mansion further', pointsTo: 18 }
         ]
     },
     { // 18
